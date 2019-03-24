@@ -1,3 +1,23 @@
-<p>
-  Your car: {{name}} {{model}}, {{speed}} km/h
-</p>
+<div class="container">
+  <br>
+  <h4>Your car: <strong>{{name}}</strong> {{model}}</h4>
+
+  Properties:
+  <div class="alert alert-success">
+    <ul>
+      <li>Speed: <strong>{{speed}}</strong> km/h</li>
+      <em>Colors</em>
+      <li>Body: <strong>{{colors.body}}</strong></li>
+      <li>Salon: <strong>{{colors.salon}}</strong></li>
+      <li>Wheels: <strong>{{colors.wheels}}</strong></li>
+    </ul>
+  </div>
+
+  Additional properties:
+  <div class="alert alert-warning">
+    <ul>
+      <li *ngFor="let option of options">{{option}}</li>
+    </ul>
+  </div>
+
+</div>
