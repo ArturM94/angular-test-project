@@ -10,11 +10,7 @@ export class CarComponent implements OnInit {
   name: string;
   model: string;
   speed: number;
-  color: {
-    body: string,
-    salon: string,
-    wheels: string,
-  };
+  color: Colors;
 
   constructor() { }
 
@@ -29,4 +25,10 @@ export class CarComponent implements OnInit {
     };
   }
 
+}
+
+interface Colors {
+  body: string;
+  salon: string;
+  wheels: string;
 }
