@@ -25,7 +25,9 @@
 
   <div class="alert alert-warning">
     <ul>
-      <li *ngFor="let option of options">{{option}}</li>
+      <li *ngFor="let option of options">
+        {{option}} <button class="btn btn-danger btn-sm" (click)="removeOption(option)">Remove</button>
+      </li>
     </ul>
   </div>
 
