@@ -16,17 +16,41 @@ export class CarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.name = 'Audi';
-    this.model = 'A8';
-    this.speed = 255;
-    this.colors = {
-      body: 'White',
-      salon: 'Black',
-      wheels: 'Silver',
-    };
-    this.options = ['ABS', 'Autopilot', 'Autoparking'];
   }
 
+  carSelect(carName) {
+    if (carName === 'bmw') {
+      this.name = 'BMW';
+      this.model = 'M5';
+      this.speed = 285;
+      this.colors = {
+        body: 'Yellow',
+        salon: 'White',
+        wheels: 'Silver',
+      };
+      this.options = ['Autopilot', 'Autoparking'];
+    } else if (carName === 'audi') {
+      this.name = 'Audi';
+      this.model = 'A8';
+      this.speed = 256;
+      this.colors = {
+        body: 'White',
+        salon: 'Black',
+        wheels: 'Red',
+      };
+      this.options = ['ABS', 'Autoparking'];
+    } else {
+      this.name = 'Mercedes';
+      this.model = 'C180';
+      this.speed = 272;
+      this.colors = {
+        body: 'Black',
+        salon: 'Brown',
+        wheels: 'Grey',
+      };
+      this.options = ['ABS', 'Autopilot'];
+    }
+  }
 }
 
 interface Colors {
