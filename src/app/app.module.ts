@@ -10,6 +10,7 @@ import { TeamComponent } from './components/team/team.component';
 
 const appRoutes: Routes = [
   {path: '', component: CarComponent},
+  {path: 'team', component: TeamComponent},
   {path: 'contacts', component: ContactsComponent},
 ];
 
