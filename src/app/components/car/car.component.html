@@ -13,6 +13,20 @@
     </ul>
   </div>
 
+  <h5>Properties editor</h5>
+  <button class="btn btn-danger" (click)="showEditor()">Edit</button>
+  <div><br></div>
+  <form *ngIf="isEdit">
+    <div class="form-group">
+      <input type="text" placeholder="Car" class="form-control" [(ngModel)]="name" name="name"><br>
+      <input type="text" placeholder="Model" class="form-control" [(ngModel)]="model" name="model"><br>
+      <input type="number" placeholder="Speed" class="form-control" [(ngModel)]="speed" name="speed"><br>
+      <input type="text" placeholder="Car color" class="form-control" [(ngModel)]="colors.body" name="car color"><br>
+      <input type="text" placeholder="Salon color" class="form-control" [(ngModel)]="colors.salon" name="salon color"><br>
+      <input type="text" placeholder="Wheels color" class="form-control" [(ngModel)]="colors.wheels" name="wheels color"><br>
+    </div>
+  </form>
+
   <h5>Additional properties</h5>
   <form (submit)="addOption(option.value)">
     <div class="form-group">
