@@ -11,6 +11,7 @@ export class CarComponent implements OnInit {
   model: string;
   speed: number;
   color: Colors;
+  options: string[];
 
   constructor() { }
 
@@ -23,6 +24,7 @@ export class CarComponent implements OnInit {
       salon: 'Black',
       wheels: 'Silver',
     };
+    this.options = ['ABS', 'Autopilot', 'Autoparking'];
   }
 
 }
