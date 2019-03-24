@@ -14,12 +14,12 @@
   </div>
 
   <h5>Additional properties</h5>
-  <form>
+  <form (submit)="addOption(option.value)">
     <div class="form-group">
       <label for="option">Add new property</label>
-      <input type="text" id="option" placeholder="Input something" class="form-control">
+      <input type="text" id="option" placeholder="Input something" class="form-control" #option>
       <br>
-      <button class="btn btn-outline-success" type="button">Add</button>
+      <button class="btn btn-outline-success" type="submit">Add</button>
     </div>
   </form>
 
