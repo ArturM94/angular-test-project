@@ -28,6 +28,15 @@ export class CarComponent implements OnInit {
     }
   }
 
+  removeOption(option) {
+    for (let i = 0; i < this.options.length; i++) {
+      if (this.options[i] === option) {
+        this.options.splice(i, 1);
+        return false;
+      }
+    }
+  }
+
   carSelect(carName) {
     if (carName === 'bmw') {
       this.name = 'BMW';
