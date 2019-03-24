@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CarComponent } from './components/car/car.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { TeamComponent } from './components/team/team.component';
 
 const appRoutes: Routes = [
   {path: '', component: CarComponent},
@@ -16,7 +17,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     CarComponent,
-    ContactsComponent
+    ContactsComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
