@@ -10,7 +10,7 @@ export class CarComponent implements OnInit {
   name: string;
   model: string;
   speed: number;
-  color: Colors;
+  colors: Colors;
   options: string[];
 
   constructor() { }
@@ -19,7 +19,7 @@ export class CarComponent implements OnInit {
     this.name = 'Audi';
     this.model = 'A8';
     this.speed = 255;
-    this.color = {
+    this.colors = {
       body: 'White',
       salon: 'Black',
       wheels: 'Silver',
