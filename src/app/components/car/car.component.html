@@ -2,7 +2,7 @@
   <br>
   <h4>Your car: <strong>{{name}}</strong> {{model}}</h4>
 
-  Properties:
+  <h5>Properties</h5>
   <div class="alert alert-success">
     <ul>
       <li>Speed: <strong>{{speed}}</strong> km/h</li>
@@ -13,7 +13,16 @@
     </ul>
   </div>
 
-  Additional properties:
+  <h5>Additional properties</h5>
+  <form>
+    <div class="form-group">
+      <label for="option">Add new property</label>
+      <input type="text" id="option" placeholder="Input something" class="form-control">
+      <br>
+      <button class="btn btn-outline-success" type="button">Add</button>
+    </div>
+  </form>
+
   <div class="alert alert-warning">
     <ul>
       <li *ngFor="let option of options">{{option}}</li>
