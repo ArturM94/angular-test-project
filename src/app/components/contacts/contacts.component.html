@@ -1,3 +1,8 @@
-<p>
-  contacts works!
-</p>
+<div class="container">
+  <br>
+  <h3>{{title}}</h3>
+  <br>
+  <ul>
+    <li *ngFor="let contact of contacts | keyvalue"><strong>{{contact.key}}</strong>: {{contact.value}}</li>
+  </ul>
+</div>
