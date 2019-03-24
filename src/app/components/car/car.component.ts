@@ -18,6 +18,16 @@ export class CarComponent implements OnInit {
   ngOnInit() {
   }
 
+  addOption(newOption) {
+    if (this.options.includes(newOption)) {
+      alert('You are already have this option!');
+      return false;
+    } else {
+      this.options.unshift(newOption);
+      return false;
+    }
+  }
+
   carSelect(carName) {
     if (carName === 'bmw') {
       this.name = 'BMW';
