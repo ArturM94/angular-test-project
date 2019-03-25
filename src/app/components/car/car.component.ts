@@ -13,11 +13,13 @@ export class CarComponent implements OnInit {
   colors: Colors;
   options: string[];
   isEdit: boolean;
+  isVisible: boolean;
 
   constructor() { }
 
   ngOnInit() {
     this.isEdit = false;
+    this.isVisible = false;
   }
 
   addOption(newOption) {
@@ -41,6 +43,10 @@ export class CarComponent implements OnInit {
 
   showEditor() {
     this.isEdit = !this.isEdit;
+  }
+
+  showDetails() {
+    this.isVisible = true;
   }
 
   carSelect(carName) {
