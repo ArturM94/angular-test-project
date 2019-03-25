@@ -11,11 +11,11 @@ export class TeamComponent implements OnInit {
   title: string;
   teammates$: object;
 
-  constructor(private team: TeamService) { }
+  constructor(private data: TeamService) { }
 
   ngOnInit() {
     this.title = 'Meet our Team!';
-    this.team.getTeam().subscribe(team => this.teammates$ = team);
+    this.data.getTeam().subscribe(data => this.teammates$ = data);
   }
 
 }
