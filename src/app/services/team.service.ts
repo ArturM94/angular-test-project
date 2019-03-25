@@ -11,7 +11,12 @@ export class TeamService {
 
   getTeam() {
     return this.http.get<Teammates>('https://randomuser.me/api/?lego&results=9')
-    .pipe(map(response => response.results));
+      .pipe(map(response => response.results));
+  }
+
+  getTeammate(teammateId) {
+    return this.http.get<Teammates>(`https://randomuser.me/api/?lego&id=${teammateId}`)
+      .pipe(map(response => response.results[0]));
   }
 }
 
