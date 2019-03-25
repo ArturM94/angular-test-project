@@ -1,3 +1,10 @@
-<p>
-  team-details works!
-</p>
+<div class="container">
+  <img src="{{teammate$?.picture.large}}" alt="img">
+  <h1>{{teammate$?.name.first}} {{teammate$?.name.last}}</h1>
+  <ul>
+    <li>Email: {{teammate$?.email}}</li>
+    <li>Phone: {{teammate$?.phone}}</li>
+    <li>Location: {{teammate$?.location.city}}, {{teammate$?.location.state}}</li>
+    <li>Timezone: {{teammate$?.location.timezone.offset}} {{teammate$?.location.timezone.description}}</li>
+  </ul>
+</div>
