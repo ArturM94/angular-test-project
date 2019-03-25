@@ -78,7 +78,7 @@ export class CarComponent implements OnInit {
   }
 }
 
-interface Colors {
+export interface Colors {
   body: string;
   salon: string;
   wheels: string;
