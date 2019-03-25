@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
+  teamMembers = [
+    {name: 'WFM 1'},
+    {name: 'WFM 2'},
+    {name: 'WFM 3'},
+    {name: 'WFM 4'},
+    {name: 'WFM 5'}
+  ];
+
   constructor() { }
 
   ngOnInit() {
