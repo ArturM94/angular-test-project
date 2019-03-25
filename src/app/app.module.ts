@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CarComponent } from './components/car/car.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { TeamComponent } from './components/team/team.component';
+import { TeamDetailsComponent } from './components/team-details/team-details.component';
 import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
     AppComponent,
     CarComponent,
     ContactsComponent,
-    TeamComponent
+    TeamComponent,
+    TeamDetailsComponent
   ],
   imports: [
     BrowserModule,
