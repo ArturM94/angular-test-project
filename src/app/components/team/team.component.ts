@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  teamMembers = [];
+  title: string;
+  teammates$: object;
 
-  constructor(private teamService: TeamService) { }
+  constructor(private team: TeamService) { }
 
   ngOnInit() {
-    this.teamMembers = this.teamService.teamMembers;
+    this.title = 'Meet our Team!';
+    this.team.getTeam().subscribe(team => this.teammates$ = team);
   }
 
 }
