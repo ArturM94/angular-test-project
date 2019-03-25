@@ -1,3 +1,4 @@
+import { TeamService } from './../../services/team.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,17 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  teamMembers = [
-    {name: 'WFM 1'},
-    {name: 'WFM 2'},
-    {name: 'WFM 3'},
-    {name: 'WFM 4'},
-    {name: 'WFM 5'}
-  ];
+  teamMembers = [];
 
-  constructor() { }
+  constructor(private teamService: TeamService) { }
 
   ngOnInit() {
+    this.teamMembers = this.teamService.teamMembers;
   }
 
 }
