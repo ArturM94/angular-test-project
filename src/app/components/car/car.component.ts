@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Colors } from './../../interfaces/colors';
 
 @Component({
   selector: 'app-car',
@@ -82,10 +83,4 @@ export class CarComponent implements OnInit {
       this.options = ['ABS', 'Autopilot'];
     }
   }
-}
-
-export interface Colors {
-  body: string;
-  salon: string;
-  wheels: string;
 }
