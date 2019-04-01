@@ -22,7 +22,7 @@ export class TeammateAdapter implements Adapter<Teammate> {
     return new Teammate(
       item.id.value,
       `${item.name.first} ${item.name.last}`,
-      `${item.location.city} ${item.location.state}`,
+      `${item.location.city}, ${item.location.state}`,
       `${item.location.timezone.offset} ${item.location.timezone.description}`,
       item.phone,
       item.email,
