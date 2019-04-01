@@ -11,6 +11,7 @@ import { TeamComponent } from './components/team/team.component';
 import { TeamDetailsComponent } from './components/team-details/team-details.component';
 import { TeamService } from './services/team.service';
 import { HoverDirective } from './directives/hover.directive';
+import { SearchPipe } from './pipes/search.pipe';
 
 const appRoutes: Routes = [
   {path: '', component: CarComponent},
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     ContactsComponent,
     TeamComponent,
     TeamDetailsComponent,
-    HoverDirective
+    HoverDirective,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
