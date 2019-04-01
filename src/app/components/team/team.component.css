@@ -6,6 +6,7 @@ div.row {
 .card {
     width: 18rem;
     margin: 25px;
+    transition: .5s all;
 }
 
 .card-title {
@@ -15,4 +16,10 @@ div.row {
 h1 {
     margin-top: 35px;
     text-align: center;
+}
+
+.hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    transition: .5s all;
 }
