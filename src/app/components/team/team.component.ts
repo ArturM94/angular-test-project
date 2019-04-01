@@ -1,5 +1,7 @@
-import { TeamService } from './../../services/team.service';
 import { Component, OnInit } from '@angular/core';
+
+import { Teammate } from './../../models/teammate';
+import { TeamService } from '../../services/team.service';
 
 @Component({
   selector: 'app-team',
@@ -9,13 +11,20 @@ import { Component, OnInit } from '@angular/core';
 export class TeamComponent implements OnInit {
 
   title: string;
-  teammates$: object;
+  team$: Teammate[];
 
   constructor(private data: TeamService) { }
 
   ngOnInit() {
     this.title = 'Meet our Team!';
-    this.data.getTeam().subscribe(data => this.teammates$ = data);
+    this.getTeam();
+  }
+
+  getTeam() {
+    this.data.getTeam().subscribe(data => {
+      console.log(data);
+      return this.team$ = data;
+    });
   }
 
 }
