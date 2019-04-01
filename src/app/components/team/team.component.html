@@ -4,7 +4,7 @@
 
   <div class="row">
 
-    <div class="card" *ngFor="let teammate of team$">
+    <div class="card" *ngFor="let teammate of team$" appHover>
       <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="{{teammate.photo}}">
       <div class="card-body">
         <h5 class="card-title">
