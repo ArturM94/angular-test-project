@@ -2,13 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CarComponent } from './components/car/car.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { TeamComponent } from './components/team/team.component';
 import { TeamDetailsComponent } from './components/team-details/team-details.component';
-import { HttpClientModule } from '@angular/common/http';
+import { TeamService } from './services/team.service';
 
 const appRoutes: Routes = [
   {path: '', component: CarComponent},
@@ -31,7 +32,9 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    TeamService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
