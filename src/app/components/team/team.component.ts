@@ -12,6 +12,7 @@ export class TeamComponent implements OnInit {
 
   title: string;
   team$: Teammate[];
+  searchValue = '';
 
   constructor(private data: TeamService) { }
 

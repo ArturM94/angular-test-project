@@ -2,9 +2,11 @@
 
   <h1>{{title}}</h1>
 
-  <div class="row">
+  <input class="form-control w-25" type="text" placeholder="Search…" [(ngModel)]="searchValue">
 
-    <div class="card" *ngFor="let teammate of team$" appHover>
+  <div class="row" *ngIf="team$">
+
+    <div class="card" *ngFor="let teammate of team$ | search:searchValue" appHover>
       <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="{{teammate.photo}}">
       <div class="card-body">
         <h5 class="card-title">
