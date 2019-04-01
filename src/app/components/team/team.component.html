@@ -10,9 +10,9 @@
       <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="{{teammate.photo}}">
       <div class="card-body">
         <h5 class="card-title">
-          {{teammate.fullName}}
+          {{teammate.fullName | uppercase}}
           <h6>
-            {{teammate.location}}
+            {{teammate.location | titlecase}}
           </h6>
         </h5>
         <p class="card-text">
