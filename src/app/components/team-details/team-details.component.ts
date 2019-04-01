@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamService } from 'src/app/services/team.service';
+import { Teammate } from '../../models/teammate';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TeamDetailsComponent implements OnInit {
 
-  teammate$: any;
+  teammate$: Teammate;
   teammateId$: string;
 
   constructor(private data: TeamService, private route: ActivatedRoute) {
@@ -17,6 +18,10 @@ export class TeamDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getTeammate();
+  }
+
+  getTeammate() {
     this.data.getTeammate(this.teammateId$).subscribe(data => {
       console.log(data);
       return this.teammate$ = data;
