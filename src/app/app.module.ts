@@ -10,6 +10,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { TeamComponent } from './components/team/team.component';
 import { TeamDetailsComponent } from './components/team-details/team-details.component';
 import { TeamService } from './services/team.service';
+import { HoverDirective } from './directives/hover.directive';
 
 const appRoutes: Routes = [
   {path: '', component: CarComponent},
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
     CarComponent,
     ContactsComponent,
     TeamComponent,
-    TeamDetailsComponent
+    TeamDetailsComponent,
+    HoverDirective
   ],
   imports: [
     BrowserModule,
