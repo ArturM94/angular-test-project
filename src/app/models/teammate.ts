@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Adapter } from '../adapter';
+import { Adapter } from '../interfaces';
 
 export class Teammate {
   constructor(
