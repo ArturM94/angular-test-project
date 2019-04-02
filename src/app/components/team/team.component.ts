@@ -21,10 +21,10 @@ export class TeamComponent implements OnInit {
     this.getTeam();
   }
 
-  getTeam() {
+  getTeam(): void {
     this.data.getTeam().subscribe(data => {
       console.log(data);
-      return this.team$ = data;
+      this.team$ = data;
     });
   }
 

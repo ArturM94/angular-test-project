@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContactsComponent implements OnInit {
 
   title: string;
-  contacts: {};
+  contacts: object;
 
   constructor() { }
 

@@ -13,7 +13,10 @@ export class TeamDetailsComponent implements OnInit {
   teammate$: Teammate;
   teammateId$: string;
 
-  constructor(private data: TeamService, private route: ActivatedRoute) {
+  constructor(
+    private data: TeamService,
+    private route: ActivatedRoute
+  ) {
     this.route.params.subscribe(params => this.teammateId$ = params.id);
   }
 
@@ -21,10 +24,10 @@ export class TeamDetailsComponent implements OnInit {
     this.getTeammate();
   }
 
-  getTeammate() {
+  getTeammate(): void {
     this.data.getTeammate(this.teammateId$).subscribe(data => {
       console.log(data);
-      return this.teammate$ = data;
+      this.teammate$ = data;
     });
   }
 

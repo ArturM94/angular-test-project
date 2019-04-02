@@ -23,34 +23,31 @@ export class CarComponent implements OnInit {
     this.isVisible = false;
   }
 
-  addOption(newOption) {
+  addOption(newOption): void {
     if (this.options.includes(newOption)) {
       alert('You are already have this option!');
-      return false;
     } else {
       this.options.unshift(newOption);
-      return false;
     }
   }
 
-  removeOption(option) {
+  removeOption(option): void {
     for (let i = 0; i < this.options.length; i++) {
       if (this.options[i] === option) {
         this.options.splice(i, 1);
-        return false;
       }
     }
   }
 
-  showEditor() {
+  showEditor(): void {
     this.isEdit = !this.isEdit;
   }
 
-  showDetails() {
+  showDetails(): void {
     this.isVisible = true;
   }
 
-  carSelect(carName) {
+  carSelect(carName): void {
     if (carName === 'bmw') {
       this.name = 'BMW';
       this.model = 'M5';
