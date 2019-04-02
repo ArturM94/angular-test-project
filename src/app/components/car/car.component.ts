@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Colors } from './../../interfaces/colors';
+import { Colors } from '../../interfaces';
 
 @Component({
   selector: 'app-car',

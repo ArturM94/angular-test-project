@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Teammate } from '../models/teammate';
+import { Teammate } from '../models';
 
 @Pipe({
   name: 'search'

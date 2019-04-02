@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-import { Teammate, TeammateAdapter } from '../models/teammate';
-import { RandomUserResponse } from '../interfaces/random-user-response';
+import { Teammate, TeammateAdapter } from '../models';
+import { RandomUserResponse } from '../interfaces';
 
 @Injectable({
   providedIn: 'root'

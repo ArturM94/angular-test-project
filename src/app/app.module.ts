@@ -5,13 +5,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { CarComponent } from './components/car/car.component';
-import { ContactsComponent } from './components/contacts/contacts.component';
-import { TeamComponent } from './components/team/team.component';
-import { TeamDetailsComponent } from './components/team-details/team-details.component';
-import { TeamService } from './services/team.service';
-import { HoverDirective } from './directives/hover.directive';
-import { SearchPipe } from './pipes/search.pipe';
+import { CarComponent } from './components';
+import { ContactsComponent } from './components';
+import { TeamComponent } from './components';
+import { TeamDetailsComponent } from './components';
+import { TeamService } from './services';
+import { HoverDirective } from './directives';
+import { SearchPipe } from './pipes';
 
 const appRoutes: Routes = [
   {path: '', component: CarComponent},
