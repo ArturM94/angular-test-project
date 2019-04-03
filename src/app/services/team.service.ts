@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { map, tap, catchError } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
 
 import { Teammate, TeammateAdapter } from '../models';
 import { RandomUserResponse } from '../interfaces';
@@ -19,16 +19,26 @@ export class TeamService {
     private adapter: TeammateAdapter,
   ) { }
 
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      console.log(`${operation} failed: ${error.message}`);
+      return of(result as T);
+    };
+  }
+
   getTeam(): Observable<Teammate[]> {
     return this.http.get(`${this.baseUrl}/?lego&results=${this.teamSize}`).pipe(
-      map((data: RandomUserResponse) => data.results.map(item => this.adapter.adapt(item)))
+      map((data: RandomUserResponse) => data.results.map(item => this.adapter.adapt(item))),
+      catchError(this.handleError('getTeam', []))
     );
   }
 
   getTeammate(teammateId): Observable<Teammate> {
     return this.http.get(`${this.baseUrl}/?lego&id=${teammateId}`).pipe(
       map((data: RandomUserResponse) => data.results[0]),
-      map(item => this.adapter.adapt(item))
+      map(item => this.adapter.adapt(item)),
+      catchError(this.handleError<Teammate>(`getTeammate by id=${teammateId}`))
     );
   }
 }
