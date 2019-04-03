@@ -14,7 +14,7 @@ export class TeamDetailsComponent implements OnInit {
   teammateId$: string;
 
   constructor(
-    private data: TeamService,
+    private teamService: TeamService,
     private route: ActivatedRoute
   ) {
     this.route.params.subscribe(params => this.teammateId$ = params.id);
@@ -25,8 +25,8 @@ export class TeamDetailsComponent implements OnInit {
   }
 
   getTeammate(): void {
-    this.data.getTeammate(this.teammateId$).subscribe(data => {
-      this.teammate$ = data;
+    this.teamService.getTeammate(this.teammateId$).subscribe(teammate => {
+      this.teammate$ = teammate;
     });
   }
 

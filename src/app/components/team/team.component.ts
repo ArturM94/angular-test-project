@@ -14,7 +14,7 @@ export class TeamComponent implements OnInit {
   team$: Teammate[];
   searchValue = '';
 
-  constructor(private data: TeamService) { }
+  constructor(private teamService: TeamService) { }
 
   ngOnInit() {
     this.title = 'Meet our Team!';
@@ -22,8 +22,8 @@ export class TeamComponent implements OnInit {
   }
 
   getTeam(): void {
-    this.data.getTeam().subscribe(data => {
-      this.team$ = data;
+    this.teamService.getTeam().subscribe(team => {
+      this.team$ = team;
     });
   }
 
