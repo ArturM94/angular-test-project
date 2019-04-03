@@ -31,7 +31,7 @@ export class TeamService {
     return this.http.get(`${this.baseUrl}/?lego&results=${this.teamSize}`).pipe(
       map((data: RandomUserResponse) => data.results.map(item => this.adapter.adapt(item))),
       tap((team: Teammate[]) => console.log('Fetched team:', team)),
-      catchError(this.handleError('getTeam', []))
+      catchError(this.handleError<Teammate[]>('getTeam', []))
     );
   }
 
