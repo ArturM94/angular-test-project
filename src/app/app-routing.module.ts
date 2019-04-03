@@ -8,6 +8,7 @@ const appRoutes: Routes = [
   { path: 'team', component: TeamComponent },
   { path: 'team/:id', component: TeamDetailsComponent },
   { path: 'contacts', component: ContactsComponent },
+  { path: '**', component: CarComponent }  // Can be replaced by 404 page
 ];
 
 @NgModule({
