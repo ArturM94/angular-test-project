@@ -26,7 +26,6 @@ export class TeamDetailsComponent implements OnInit {
 
   getTeammate(): void {
     this.data.getTeammate(this.teammateId$).subscribe(data => {
-      console.log(data);
       this.teammate$ = data;
     });
   }

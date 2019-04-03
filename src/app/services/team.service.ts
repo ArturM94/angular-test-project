@@ -30,6 +30,7 @@ export class TeamService {
   getTeam(): Observable<Teammate[]> {
     return this.http.get(`${this.baseUrl}/?lego&results=${this.teamSize}`).pipe(
       map((data: RandomUserResponse) => data.results.map(item => this.adapter.adapt(item))),
+      tap((team: Teammate[]) => console.log('Fetched team:', team)),
       catchError(this.handleError('getTeam', []))
     );
   }
@@ -38,6 +39,7 @@ export class TeamService {
     return this.http.get(`${this.baseUrl}/?lego&id=${teammateId}`).pipe(
       map((data: RandomUserResponse) => data.results[0]),
       map(item => this.adapter.adapt(item)),
+      tap((teammate: Teammate) => console.log('Fetched teammate:', teammate)),
       catchError(this.handleError<Teammate>(`getTeammate by id=${teammateId}`))
     );
   }
