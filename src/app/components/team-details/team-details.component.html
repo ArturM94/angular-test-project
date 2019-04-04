@@ -1,10 +1,22 @@
 <div class="container" *ngIf="teammate$">
-  <img src="{{teammate$.photo}}" alt="img">
-  <h1>{{teammate$.fullName}}</h1>
-  <ul>
-    <li>Email: {{teammate$.email}}</li>
-    <li>Phone: {{teammate$.phone}}</li>
-    <li>Location: {{teammate$.location}}</li>
-    <li>Timezone: {{teammate$.timezone}}</li>
-  </ul>
+  <div class="photo">
+    <img src="{{teammate$.photo}}" alt="img">
+  </div>
+  <h1>{{teammate$.fullName | uppercase}}</h1>
+  <div class="description">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <strong>Email:</strong> {{teammate$.email}}
+      </li>
+      <li class="list-group-item">
+        <strong>Phone:</strong> {{teammate$.phone}}
+      </li>
+      <li class="list-group-item">
+        <strong>Location:</strong> {{teammate$.location | titlecase}}
+      </li>
+      <li class="list-group-item">
+        <strong>Timezone:</strong> {{teammate$.timezone | titlecase}}
+      </li>
+    </ul>
+  </div>
 </div>
