@@ -11,7 +11,7 @@ import { TeamService } from '../../services';
 export class TeamComponent implements OnInit {
 
   title: string;
-  team$: Teammate[];
+  team: Teammate[];
   searchValue = '';
 
   constructor(private teamService: TeamService) { }
@@ -23,7 +23,7 @@ export class TeamComponent implements OnInit {
 
   getTeam(): void {
     this.teamService.getTeam().subscribe(team => {
-      this.team$ = team;
+      this.team = team;
     });
   }
 

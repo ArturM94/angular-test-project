@@ -11,14 +11,14 @@ import { TeamService } from '../../services/team.service';
 })
 export class TeamDetailsComponent implements OnInit {
 
-  teammate$: Teammate;
-  teammateId$: string;
+  teammate: Teammate;
+  teammateId: string;
 
   constructor(
     private teamService: TeamService,
     private route: ActivatedRoute
   ) {
-    this.route.params.subscribe(params => this.teammateId$ = params.id);
+    this.route.params.subscribe(params => this.teammateId = params.id);
   }
 
   ngOnInit() {
@@ -26,8 +26,8 @@ export class TeamDetailsComponent implements OnInit {
   }
 
   getTeammate(): void {
-    this.teamService.getTeammate(this.teammateId$).subscribe(teammate => {
-      this.teammate$ = teammate;
+    this.teamService.getTeammate(this.teammateId).subscribe(teammate => {
+      this.teammate = teammate;
     });
   }
 

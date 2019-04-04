@@ -1,21 +1,21 @@
-<div class="container" *ngIf="teammate$">
+<div class="container" *ngIf="teammate">
   <div class="photo">
-    <img src="{{teammate$.photo}}" alt="img">
+    <img src="{{teammate.photo}}" alt="img">
   </div>
-  <h1>{{teammate$.fullName | uppercase}}</h1>
+  <h1>{{teammate.fullName | uppercase}}</h1>
   <div class="description">
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
-        <strong>Email:</strong> {{teammate$.email}}
+        <strong>Email:</strong> {{teammate.email}}
       </li>
       <li class="list-group-item">
-        <strong>Phone:</strong> {{teammate$.phone}}
+        <strong>Phone:</strong> {{teammate.phone}}
       </li>
       <li class="list-group-item">
-        <strong>Location:</strong> {{teammate$.location | titlecase}}
+        <strong>Location:</strong> {{teammate.location | titlecase}}
       </li>
       <li class="list-group-item">
-        <strong>Timezone:</strong> {{teammate$.timezone | titlecase}}
+        <strong>Timezone:</strong> {{teammate.timezone | titlecase}}
       </li>
     </ul>
   </div>
