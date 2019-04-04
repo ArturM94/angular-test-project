@@ -1,0 +1,17 @@
+.container {
+    margin-top: 50px;
+}
+
+.photo {
+    float: left;
+    margin-right: 50px;
+    border-width: 1;
+    border-color: rgba(0, 0, 0, .7);
+    border-style: solid;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.description {
+    float: left;  
+}
